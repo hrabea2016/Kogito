@@ -11,9 +11,11 @@ public class Main {
             KieContainer kContainer = ks.getKieClasspathContainer();
             KieSession kSession = kContainer.newKieSession("KieSession2");
             
-            kSession.insert(new Person("P1", 18, true));
+            kSession.insert(new Person("P1", 17, false));
             kSession.insert(new Person("P2", 22, true));
             kSession.insert(new Person("P3", 26, true));
+            kSession.insert(new Person("P4", 27, true));
+            kSession.insert(new Person("P5", 30, true));
             
             kSession.startProcess("BPMN_MAIN_PROCESS");
             
